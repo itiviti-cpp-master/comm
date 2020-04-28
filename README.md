@@ -1,7 +1,14 @@
 # comm command line utility
 
+comm -- select or reject lines common to two files
+
+The comm utility reads file1 and file2, which should be sorted lexically, and produces three text columns as output: lines only in file1;
+lines only in file2; and lines in both files.
+
+The filename `-` means the standard input.
+
 ```bash
-comm [OPTION] [FILE]
+comm [OPTION] FILE1 FILE2
 ```
 
 options:
