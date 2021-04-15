@@ -22,7 +22,7 @@ jobs:
     - name: Run tests
       env:
         LANG: C
-      run: ctest
+      run: ctest -VV
       working-directory: ./build/test
     - name: Prepare ASAN build dir
       run: mkdir build_asan
@@ -35,7 +35,7 @@ jobs:
     - name: Run tests
       env:
         LANG: C
-      run: ctest
+      run: ctest -VV
       working-directory: ./build_asan/test
     - name: Prepare USAN build dir
       run: mkdir build_usan
@@ -48,5 +48,5 @@ jobs:
     - name: Run tests
       env:
         LANG: C
-      run: ctest
+      run: ctest -VV
       working-directory: ./build_usan/test
