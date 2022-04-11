@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout submodules
+      uses: actions/checkout@v1
       with: 
         submodules: recursive
     - name: Prepare build dir
@@ -29,10 +30,10 @@ jobs:
     - name: Generate ASAN build files using cmake
       run: cmake .. -DCMAKE_BUILD_TYPE=ASAN
       working-directory: ./build_asan
-    - name: Run make
+    - name: Run ASAN make
       run: make
       working-directory: ./build_asan
-    - name: Run tests
+    - name: Run ASAN tests
       env:
         LANG: C
       run: ctest -VV
@@ -42,10 +43,10 @@ jobs:
     - name: Generate USAN build files using cmake
       run: cmake .. -DCMAKE_BUILD_TYPE=USAN
       working-directory: ./build_usan
-    - name: Run make
+    - name: Run USAN make
       run: make
       working-directory: ./build_usan
-    - name: Run tests
+    - name: Run USAN tests
       env:
         LANG: C
       run: ctest -VV

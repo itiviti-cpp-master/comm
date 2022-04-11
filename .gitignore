@@ -34,8 +34,13 @@
 # ViM temporary files
 .*.swp
 
+# CMake stuff
 CMakeCache.txt
 CMakeFiles/*
 CTestTestfile.cmake
 Makefile
 cmake_install.cmake
+cmake-build-debug
+
+# Various IDE
+.idea
