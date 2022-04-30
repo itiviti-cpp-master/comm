@@ -57,3 +57,7 @@ add_test(
     NAME comm123-sep
     COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-123-sep.sh $<TARGET_FILE:comm> ${TEST_DATA}"
     )
+add_test(
+    NAME comm123-sep2
+    COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-123-sep2.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+    )
