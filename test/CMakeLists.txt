@@ -42,18 +42,18 @@ add_test(
     COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-123.sh $<TARGET_FILE:comm> ${TEST_DATA}"
     )
 add_test(
-    NAME comm12
+    NAME comm12-sep
     COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-12-sep.sh $<TARGET_FILE:comm> ${TEST_DATA}"
     )
 add_test(
-    NAME comm13
+    NAME comm13-sep
     COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-13-sep.sh $<TARGET_FILE:comm> ${TEST_DATA}"
     )
 add_test(
-    NAME comm23
+    NAME comm23-sep
     COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-23-sep.sh $<TARGET_FILE:comm> ${TEST_DATA}"
     )
 add_test(
-    NAME comm123
+    NAME comm123-sep
     COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-123-sep.sh $<TARGET_FILE:comm> ${TEST_DATA}"
     )
