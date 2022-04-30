@@ -58,6 +58,18 @@ add_test(
     COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-123-sep.sh $<TARGET_FILE:comm> ${TEST_DATA}"
     )
 add_test(
-    NAME comm123-sep2
-    COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-123-sep2.sh $<TARGET_FILE:comm> ${TEST_DATA}"
-    )
+        NAME comm-stdin
+        COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+)
+add_test(
+        NAME comm-2-stdin
+        COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-2-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+)
+add_test(
+        NAME comm-12-stdin
+        COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-12-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+)
+add_test(
+        NAME comm-123-stdin
+        COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-123-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+)
