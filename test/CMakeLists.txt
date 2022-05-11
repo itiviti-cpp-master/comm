@@ -34,9 +34,21 @@ add_test(
     COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-13.sh $<TARGET_FILE:comm> ${TEST_DATA}"
     )
 add_test(
+    NAME comm21
+    COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-21.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+)
+add_test(
     NAME comm23
     COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-23.sh $<TARGET_FILE:comm> ${TEST_DATA}"
     )
+add_test(
+    NAME comm31
+    COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-31.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+)
+add_test(
+    NAME comm32
+    COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-32.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+)
 add_test(
     NAME comm123
     COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-123.sh $<TARGET_FILE:comm> ${TEST_DATA}"
@@ -58,18 +70,26 @@ add_test(
     COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-123-sep.sh $<TARGET_FILE:comm> ${TEST_DATA}"
     )
 add_test(
-        NAME comm-stdin
-        COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
-)
+    NAME comm-stdin
+    COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+    )
 add_test(
-        NAME comm-2-stdin
-        COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-2-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
-)
+    NAME comm-2-stdin
+    COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-2-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+    )
 add_test(
-        NAME comm-12-stdin
-        COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-12-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
-)
+    NAME comm-12-stdin
+    COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-12-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+    )
 add_test(
-        NAME comm-123-stdin
-        COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-123-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
-)
+    NAME comm-123-stdin
+    COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-123-stdin.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+    )    
+add_test(
+    NAME comm312
+    COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-312.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+    )
+add_test(
+    NAME comm321
+    COMMAND sh -c "${PROJECT_SOURCE_DIR}/test-321.sh $<TARGET_FILE:comm> ${TEST_DATA}"
+    )
